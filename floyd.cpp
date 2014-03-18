@@ -29,8 +29,8 @@ void Floyd(unsigned size) {
 		while(i < size) {
 			j = 0;
 			while(j < size) {
-				if(dists[i][j] > dist[i][k] + dist[k][j]) {
-					dist[i][j] = dist[i][k] + dist[k][j];
+				if(dists[i][j] > dists[i][k] + dists[k][j]) {
+					dists[i][j] = dists[i][k] + dists[k][j];
 					paths[i][j] = paths[k][j];
 				}
 				j++;
